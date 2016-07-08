@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Portfolio</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  
+<body>
+  <div class="navbar">
+    <div class="container">
+        <ul class="header-menu">
+          <%= link_to '<li>Welcome</li>' .html_safe, 'welcome' %>
+          <%= link_to '<li>Portfolio</li>' .html_safe, 'portfolio' %>
+          <%= link_to '<li>Blog<li>' .html_safe, 'https://medium.com/about-codecademy' %>
+          <%= link_to '<li>About</li>' .html_safe, 'about' %>
+          <%= link_to '<li>Contact</li>' .html_safe, 'contact' %>
+          <li class="name">Matt Healy</li>
+        </ul>
+      </div>
+    </div>
+
+<%= yield %>
+  
+  <div class="footer">
+    <div class="container">
+      <div class="contact">
+        <ul class="social">
+          <li><a class="github" href="#">GitHub</a></li>
+          <li><a class="linkedin" href="#">LinkedIn</a></li>
+          <li><a class="twitter" href="#">Twitter</a></li>
+        </ul>
+        <p>&copy; 2015 Matt Healy</p>
+      </div>
+    </div>
+  </div>
+</body>
+  
+</html>
